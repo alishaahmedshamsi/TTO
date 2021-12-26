@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTO</title>
+    <link rel="stylesheet" href="pg1.css">
+	 <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+
+</head>
+<body>
+    <header>
+      <div>
+        <i class="fas fa-plane"> </i><i class="fas fa-train"></i> <i class="fas fa-bus"></i>
+        <p>Travel</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="titles">
+      <h1>Travel Ticket Order TTO</h1>
+      <p>
+        Travel through air or land with just one click!
+      </p>
+    </section>
+    <div class="container">
+        <div class="login-register">
+            <div class="nav-buttons">
+                <button id="loginBtn" class='active' >Login </button>
+                <button id="registerBtn">Register</button>
+            </div>
+            <div class="form-group">
+                <form action="" id="loginform">
+                    <label for="username">username</label>
+                    <input type="text" id="username" required>
+                    <label for="password">password</label>
+                    <input type="password" id="password" required>
+                    <input type="button" onClick="location.href='home.html'" value="Submit" class="submit">
+                </form>
+                <form action="" id="registerform">
+                    <label for="fullname">fullname</label>
+                    <input type="text" id="fullname" required>
+                    <label for="email">email</label>
+                    <input type="text" id="email" required>
+                    <label for="passwword">password</label>
+                    <input type="password" id="password" required>
+                    <label for="confirmpassword">confirm password</label>
+                    <input type="password" id="confirmpassword" required>
+                    <input type="button" onClick="location.href='home.html'" value="Submit" class="submit">
+                </form>
+            </div>
+            <div id="forgot">
+                <a href="">forgot password?</a>
+            </div>
+        </div>
+
+    </div>
+	<script>
+        var loginBtn = document.getElementById("loginBtn");
+        var registerBtn = document.getElementById("registerBtn");
+        var loginform = document.getElementById("loginform");
+        var registerform = document.getElementById("registerform");
+        var forgot = document.getElementById("forgot");
+
+        registerBtn.onclick= function() {
+            registerform.style.left='0px';
+            registerform.style.opacity='1';
+            loginform.style.left='-500px';
+            loginform.style.opacity='0';
+            forgot.style.left='-500px';
+            forgot.style.opacity='0';
+            registerBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+
+        }
+
+        loginBtn.onclick= function() {
+            loginform.style.left='0px';
+            loginform.style.opacity='1';
+            forgot.style.left='0px';
+            forgot.style.opacity='1';
+            registerform.style='500px';
+            loginBtn.classList.add('active');
+            registerBtn.classList.remove('active');
+            registerform.style.opacity='0';
+        }
+
+
+
+    </script>
+	</body>
+	</html>

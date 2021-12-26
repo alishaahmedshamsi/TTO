@@ -1,0 +1,76 @@
+<html>
+<head>
+<link rel="stylesheet" href="invoice.css">
+	 <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+</head>
+<body>
+<header>
+      <div>
+        <i class="fas fa-plane"> </i><i class="fas fa-train"></i> <i class="fas fa-bus"></i>
+        <p>Travel</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+<section class="titles">
+<h1>Order Confirmed</h1>
+<br><br>
+
+    <div class="container">
+        <div class="reciept">
+            <div class="form-group">
+
+                <form action="" id="loginform">
+				<br>
+				<br>
+<p>Customer Information</p>
+<br>
+<p>Name: <p id="name">test</p><br></p>
+<p>Address: <p id="address"></p><br></p>
+<p>Payment Type: <p id="payment_type"></p><br></p>
+
+<br>
+<p>Seats: <p id="seats"></p><br></p>
+<p>Total Amount: <p id="price"></p><br></p>
+ </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	$('#name').text(urlParams.get('first-name')+' '+urlParams.get('last-name'));
+	$('#address').text(urlParams.get('streetaddress'));
+
+	switch(urlParams.get('payment_type')){
+		case 'card':
+			var text = urlParams.get('payment_type')+' (Paid)';
+			break;
+		default:
+			var text = urlParams.get('payment_type')+' (Pending)';
+			break;
+	}
+
+	$('#payment_type').text(text);
+
+	$('#seats').text(urlParams.get('seats'));
+	$('#price').text(urlParams.get('seats')*35000);
+
+
+
+</script>
+</html>

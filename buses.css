@@ -1,0 +1,227 @@
+  /*------header-------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #ffce14;
+  background: #000000;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "roboto";
+  margin: 0 2rem;
+}
+header div i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+header nav {
+  padding: 1rem 2rem;
+}
+nav ul li {
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+nav li a {
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: all 250ms ease-in;
+}
+nav li a:hover {
+  background: #ffce14;
+  color: black;
+}
+*,
+*::after,
+*::before {
+  margin: 30;
+  padding: 50;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height:150vh;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-book {
+  height: 150vh;
+  background-image: linear-gradient(to right bottom, #000000, #330000);
+}
+
+.book {
+  width: 90%;
+  height: 94%;
+  background-image: linear-gradient(
+      90deg,
+      rgba(200, 200, 200, 0.9) 0%,
+      rgba(200, 200, 200, 0.9) 20%,
+      transparent 60%
+    ),
+    url("https://wallpapercave.com/wp/wp3779033.jpg");
+  background-size: 100%;
+  background-position: right;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.book__form {
+  width: 50%;
+  padding: 6rem;
+}
+
+.heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+.heading3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(3) {
+  margin-bottom: 0rem;
+}
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: black;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #07575b;
+  background-color: rgb(200, 200, 200);
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #db3030;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: grey;
+}
+
+.form__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.5s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-label {
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1C0202;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 4rem;
+  background-color: #000000;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
